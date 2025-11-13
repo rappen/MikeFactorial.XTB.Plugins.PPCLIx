@@ -36,6 +36,7 @@ namespace MikeFactorial.XTB.PPCLIx
             this.toolStripCLIVersionsDropDown = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripConnectionDropDown = new System.Windows.Forms.ToolStripDropDownButton();
+            this.refreshCLIAuthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.syncCLIAuthWithCurrentConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -52,13 +53,27 @@ namespace MikeFactorial.XTB.PPCLIx
             this.textBoxParentNodeHelp = new System.Windows.Forms.TextBox();
             this.groupBoxOutput = new System.Windows.Forms.GroupBox();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
-            this.refreshCLIAuthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.toolStripMenu.SuspendLayout();
             this.groupCommandArgs.SuspendLayout();
             this.groupTree.SuspendLayout();
             this.groupCommandArea.SuspendLayout();
             this.groupBoxHelp.SuspendLayout();
             this.groupBoxOutput.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripMenu
@@ -74,7 +89,7 @@ namespace MikeFactorial.XTB.PPCLIx
             this.toolStripSeparator2});
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
-            this.toolStripMenu.Size = new System.Drawing.Size(1319, 31);
+            this.toolStripMenu.Size = new System.Drawing.Size(989, 31);
             this.toolStripMenu.TabIndex = 4;
             this.toolStripMenu.Text = "toolStrip1";
             // 
@@ -87,7 +102,7 @@ namespace MikeFactorial.XTB.PPCLIx
             // toolStripCLIVersionsDropDown
             // 
             this.toolStripCLIVersionsDropDown.Name = "toolStripCLIVersionsDropDown";
-            this.toolStripCLIVersionsDropDown.Size = new System.Drawing.Size(160, 31);
+            this.toolStripCLIVersionsDropDown.Size = new System.Drawing.Size(121, 31);
             // 
             // toolStripSeparator1
             // 
@@ -106,6 +121,13 @@ namespace MikeFactorial.XTB.PPCLIx
             this.toolStripConnectionDropDown.Name = "toolStripConnectionDropDown";
             this.toolStripConnectionDropDown.Size = new System.Drawing.Size(37, 28);
             this.toolStripConnectionDropDown.Text = "Update CLI Connection";
+            // 
+            // refreshCLIAuthToolStripMenuItem
+            // 
+            this.refreshCLIAuthToolStripMenuItem.Name = "refreshCLIAuthToolStripMenuItem";
+            this.refreshCLIAuthToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.refreshCLIAuthToolStripMenuItem.Text = "Refresh CLI Auth Profiles";
+            this.refreshCLIAuthToolStripMenuItem.Click += new System.EventHandler(this.syncCLIAuthWithCurrentConnectionToolStripMenuItem_Click);
             // 
             // syncCLIAuthWithCurrentConnectionToolStripMenuItem
             // 
@@ -143,12 +165,10 @@ namespace MikeFactorial.XTB.PPCLIx
             // groupCommandArgs
             // 
             this.groupCommandArgs.Controls.Add(this.propertyGrid1);
-            this.groupCommandArgs.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupCommandArgs.Location = new System.Drawing.Point(892, 31);
-            this.groupCommandArgs.Margin = new System.Windows.Forms.Padding(4);
+            this.groupCommandArgs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupCommandArgs.Location = new System.Drawing.Point(0, 0);
             this.groupCommandArgs.Name = "groupCommandArgs";
-            this.groupCommandArgs.Padding = new System.Windows.Forms.Padding(4);
-            this.groupCommandArgs.Size = new System.Drawing.Size(427, 595);
+            this.groupCommandArgs.Size = new System.Drawing.Size(301, 478);
             this.groupCommandArgs.TabIndex = 14;
             this.groupCommandArgs.TabStop = false;
             // 
@@ -157,10 +177,9 @@ namespace MikeFactorial.XTB.PPCLIx
             this.propertyGrid1.DocCommentHeight = 59;
             this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertyGrid1.LineColor = System.Drawing.SystemColors.ScrollBar;
-            this.propertyGrid1.Location = new System.Drawing.Point(4, 19);
-            this.propertyGrid1.Margin = new System.Windows.Forms.Padding(4);
+            this.propertyGrid1.Location = new System.Drawing.Point(3, 16);
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(419, 572);
+            this.propertyGrid1.Size = new System.Drawing.Size(295, 459);
             this.propertyGrid1.TabIndex = 18;
             this.propertyGrid1.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.propertyGrid1_PropertyValueChanged);
             this.propertyGrid1.SelectedGridItemChanged += new System.Windows.Forms.SelectedGridItemChangedEventHandler(this.propertyGrid1_SelectedGridItemChanged);
@@ -168,12 +187,10 @@ namespace MikeFactorial.XTB.PPCLIx
             // groupTree
             // 
             this.groupTree.Controls.Add(this.treePacCommands);
-            this.groupTree.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupTree.Location = new System.Drawing.Point(0, 31);
-            this.groupTree.Margin = new System.Windows.Forms.Padding(4);
+            this.groupTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupTree.Location = new System.Drawing.Point(0, 0);
             this.groupTree.Name = "groupTree";
-            this.groupTree.Padding = new System.Windows.Forms.Padding(4);
-            this.groupTree.Size = new System.Drawing.Size(427, 595);
+            this.groupTree.Size = new System.Drawing.Size(238, 478);
             this.groupTree.TabIndex = 15;
             this.groupTree.TabStop = false;
             // 
@@ -182,22 +199,19 @@ namespace MikeFactorial.XTB.PPCLIx
             this.treePacCommands.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treePacCommands.FullRowSelect = true;
             this.treePacCommands.HideSelection = false;
-            this.treePacCommands.Location = new System.Drawing.Point(4, 19);
-            this.treePacCommands.Margin = new System.Windows.Forms.Padding(4);
+            this.treePacCommands.Location = new System.Drawing.Point(3, 16);
             this.treePacCommands.Name = "treePacCommands";
             this.treePacCommands.PathSeparator = " ";
-            this.treePacCommands.Size = new System.Drawing.Size(419, 572);
+            this.treePacCommands.Size = new System.Drawing.Size(232, 459);
             this.treePacCommands.TabIndex = 7;
             // 
             // groupCommandArea
             // 
             this.groupCommandArea.Controls.Add(this.textBoxCommandText);
             this.groupCommandArea.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupCommandArea.Location = new System.Drawing.Point(427, 31);
-            this.groupCommandArea.Margin = new System.Windows.Forms.Padding(4);
+            this.groupCommandArea.Location = new System.Drawing.Point(0, 0);
             this.groupCommandArea.Name = "groupCommandArea";
-            this.groupCommandArea.Padding = new System.Windows.Forms.Padding(4);
-            this.groupCommandArea.Size = new System.Drawing.Size(465, 54);
+            this.groupCommandArea.Size = new System.Drawing.Size(442, 44);
             this.groupCommandArea.TabIndex = 16;
             this.groupCommandArea.TabStop = false;
             this.groupCommandArea.Text = "Command";
@@ -206,22 +220,19 @@ namespace MikeFactorial.XTB.PPCLIx
             // 
             this.textBoxCommandText.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBoxCommandText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCommandText.Location = new System.Drawing.Point(4, 19);
-            this.textBoxCommandText.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxCommandText.Location = new System.Drawing.Point(3, 16);
             this.textBoxCommandText.Name = "textBoxCommandText";
-            this.textBoxCommandText.Size = new System.Drawing.Size(457, 20);
+            this.textBoxCommandText.Size = new System.Drawing.Size(436, 20);
             this.textBoxCommandText.TabIndex = 25;
             this.textBoxCommandText.TextChanged += new System.EventHandler(this.textBoxCommandText_TextChanged);
             // 
             // groupBoxHelp
             // 
             this.groupBoxHelp.Controls.Add(this.textBoxParentNodeHelp);
-            this.groupBoxHelp.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBoxHelp.Location = new System.Drawing.Point(427, 280);
-            this.groupBoxHelp.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxHelp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxHelp.Location = new System.Drawing.Point(0, 0);
             this.groupBoxHelp.Name = "groupBoxHelp";
-            this.groupBoxHelp.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxHelp.Size = new System.Drawing.Size(465, 346);
+            this.groupBoxHelp.Size = new System.Drawing.Size(442, 205);
             this.groupBoxHelp.TabIndex = 17;
             this.groupBoxHelp.TabStop = false;
             this.groupBoxHelp.Text = "Help";
@@ -229,23 +240,20 @@ namespace MikeFactorial.XTB.PPCLIx
             // textBoxParentNodeHelp
             // 
             this.textBoxParentNodeHelp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxParentNodeHelp.Location = new System.Drawing.Point(4, 19);
-            this.textBoxParentNodeHelp.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxParentNodeHelp.Location = new System.Drawing.Point(3, 16);
             this.textBoxParentNodeHelp.Multiline = true;
             this.textBoxParentNodeHelp.Name = "textBoxParentNodeHelp";
             this.textBoxParentNodeHelp.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxParentNodeHelp.Size = new System.Drawing.Size(457, 323);
+            this.textBoxParentNodeHelp.Size = new System.Drawing.Size(436, 186);
             this.textBoxParentNodeHelp.TabIndex = 24;
             // 
             // groupBoxOutput
             // 
             this.groupBoxOutput.Controls.Add(this.textBoxOutput);
             this.groupBoxOutput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxOutput.Location = new System.Drawing.Point(427, 85);
-            this.groupBoxOutput.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxOutput.Location = new System.Drawing.Point(0, 0);
             this.groupBoxOutput.Name = "groupBoxOutput";
-            this.groupBoxOutput.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxOutput.Size = new System.Drawing.Size(465, 195);
+            this.groupBoxOutput.Size = new System.Drawing.Size(442, 225);
             this.groupBoxOutput.TabIndex = 18;
             this.groupBoxOutput.TabStop = false;
             this.groupBoxOutput.Text = "Output";
@@ -253,35 +261,75 @@ namespace MikeFactorial.XTB.PPCLIx
             // textBoxOutput
             // 
             this.textBoxOutput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxOutput.Location = new System.Drawing.Point(4, 19);
-            this.textBoxOutput.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxOutput.Location = new System.Drawing.Point(3, 16);
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxOutput.Size = new System.Drawing.Size(457, 172);
+            this.textBoxOutput.Size = new System.Drawing.Size(436, 206);
             this.textBoxOutput.TabIndex = 25;
             // 
-            // refreshCLIAuthToolStripMenuItem
+            // splitContainer1
             // 
-            this.refreshCLIAuthToolStripMenuItem.Name = "refreshCLIAuthToolStripMenuItem";
-            this.refreshCLIAuthToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
-            this.refreshCLIAuthToolStripMenuItem.Text = "Refresh CLI Auth Profiles";
-            this.refreshCLIAuthToolStripMenuItem.Click += new System.EventHandler(this.syncCLIAuthWithCurrentConnectionToolStripMenuItem_Click);
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 31);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.groupTree);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(989, 478);
+            this.splitContainer1.SplitterDistance = 238;
+            this.splitContainer1.TabIndex = 19;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.splitContainer3);
+            this.splitContainer2.Panel1.Controls.Add(this.groupCommandArea);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.groupCommandArgs);
+            this.splitContainer2.Size = new System.Drawing.Size(747, 478);
+            this.splitContainer2.SplitterDistance = 442;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(0, 44);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.groupBoxOutput);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.groupBoxHelp);
+            this.splitContainer3.Size = new System.Drawing.Size(442, 434);
+            this.splitContainer3.SplitterDistance = 225;
+            this.splitContainer3.TabIndex = 17;
             // 
             // PPCLIxPluginControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBoxOutput);
-            this.Controls.Add(this.groupBoxHelp);
-            this.Controls.Add(this.groupCommandArea);
-            this.Controls.Add(this.groupTree);
-            this.Controls.Add(this.groupCommandArgs);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStripMenu);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PPCLIxPluginControl";
             this.PluginIcon = ((System.Drawing.Icon)(resources.GetObject("$this.PluginIcon")));
-            this.Size = new System.Drawing.Size(1319, 626);
+            this.Size = new System.Drawing.Size(989, 509);
             this.TabIcon = ((System.Drawing.Image)(resources.GetObject("$this.TabIcon")));
             this.Load += new System.EventHandler(this.MyPluginControl_Load);
             this.toolStripMenu.ResumeLayout(false);
@@ -294,6 +342,18 @@ namespace MikeFactorial.XTB.PPCLIx
             this.groupBoxHelp.PerformLayout();
             this.groupBoxOutput.ResumeLayout(false);
             this.groupBoxOutput.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,5 +382,8 @@ namespace MikeFactorial.XTB.PPCLIx
         private ToolStripMenuItem syncCLIAuthWithCurrentConnectionToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripMenuItem refreshCLIAuthToolStripMenuItem;
+        private SplitContainer splitContainer1;
+        private SplitContainer splitContainer2;
+        private SplitContainer splitContainer3;
     }
 }

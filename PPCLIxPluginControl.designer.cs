@@ -43,7 +43,6 @@ namespace MikeFactorial.XTB.PPCLIx
             this.toolStripRunButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.groupCommandArgs = new System.Windows.Forms.GroupBox();
-            this.propertyGrid1 = new MikeFactorial.XTB.PPCLIx.PropertyGridEx();
             this.groupTree = new System.Windows.Forms.GroupBox();
             this.treePacCommands = new System.Windows.Forms.TreeView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -56,6 +55,7 @@ namespace MikeFactorial.XTB.PPCLIx
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.propertyGrid1 = new MikeFactorial.XTB.PPCLIx.PropertyGridEx();
             this.toolStripMenu.SuspendLayout();
             this.groupCommandArgs.SuspendLayout();
             this.groupTree.SuspendLayout();
@@ -168,21 +168,9 @@ namespace MikeFactorial.XTB.PPCLIx
             this.groupCommandArgs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupCommandArgs.Location = new System.Drawing.Point(0, 0);
             this.groupCommandArgs.Name = "groupCommandArgs";
-            this.groupCommandArgs.Size = new System.Drawing.Size(301, 478);
+            this.groupCommandArgs.Size = new System.Drawing.Size(302, 478);
             this.groupCommandArgs.TabIndex = 14;
             this.groupCommandArgs.TabStop = false;
-            // 
-            // propertyGrid1
-            // 
-            this.propertyGrid1.DocCommentHeight = 59;
-            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propertyGrid1.LineColor = System.Drawing.SystemColors.ScrollBar;
-            this.propertyGrid1.Location = new System.Drawing.Point(3, 16);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(295, 459);
-            this.propertyGrid1.TabIndex = 18;
-            this.propertyGrid1.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.propertyGrid1_PropertyValueChanged);
-            this.propertyGrid1.SelectedGridItemChanged += new System.Windows.Forms.SelectedGridItemChangedEventHandler(this.propertyGrid1_SelectedGridItemChanged);
             // 
             // groupTree
             // 
@@ -190,7 +178,7 @@ namespace MikeFactorial.XTB.PPCLIx
             this.groupTree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupTree.Location = new System.Drawing.Point(0, 0);
             this.groupTree.Name = "groupTree";
-            this.groupTree.Size = new System.Drawing.Size(238, 478);
+            this.groupTree.Size = new System.Drawing.Size(237, 478);
             this.groupTree.TabIndex = 15;
             this.groupTree.TabStop = false;
             // 
@@ -202,7 +190,7 @@ namespace MikeFactorial.XTB.PPCLIx
             this.treePacCommands.Location = new System.Drawing.Point(3, 16);
             this.treePacCommands.Name = "treePacCommands";
             this.treePacCommands.PathSeparator = " ";
-            this.treePacCommands.Size = new System.Drawing.Size(232, 459);
+            this.treePacCommands.Size = new System.Drawing.Size(231, 459);
             this.treePacCommands.TabIndex = 7;
             // 
             // groupCommandArea
@@ -239,10 +227,12 @@ namespace MikeFactorial.XTB.PPCLIx
             // 
             // textBoxParentNodeHelp
             // 
+            this.textBoxParentNodeHelp.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxParentNodeHelp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxParentNodeHelp.Location = new System.Drawing.Point(3, 16);
             this.textBoxParentNodeHelp.Multiline = true;
             this.textBoxParentNodeHelp.Name = "textBoxParentNodeHelp";
+            this.textBoxParentNodeHelp.ReadOnly = true;
             this.textBoxParentNodeHelp.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxParentNodeHelp.Size = new System.Drawing.Size(436, 186);
             this.textBoxParentNodeHelp.TabIndex = 24;
@@ -260,10 +250,12 @@ namespace MikeFactorial.XTB.PPCLIx
             // 
             // textBoxOutput
             // 
+            this.textBoxOutput.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxOutput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxOutput.Location = new System.Drawing.Point(3, 16);
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
+            this.textBoxOutput.ReadOnly = true;
             this.textBoxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxOutput.Size = new System.Drawing.Size(436, 206);
             this.textBoxOutput.TabIndex = 25;
@@ -282,7 +274,7 @@ namespace MikeFactorial.XTB.PPCLIx
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(989, 478);
-            this.splitContainer1.SplitterDistance = 238;
+            this.splitContainer1.SplitterDistance = 237;
             this.splitContainer1.TabIndex = 19;
             // 
             // splitContainer2
@@ -299,7 +291,7 @@ namespace MikeFactorial.XTB.PPCLIx
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.groupCommandArgs);
-            this.splitContainer2.Size = new System.Drawing.Size(747, 478);
+            this.splitContainer2.Size = new System.Drawing.Size(748, 478);
             this.splitContainer2.SplitterDistance = 442;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -320,6 +312,18 @@ namespace MikeFactorial.XTB.PPCLIx
             this.splitContainer3.Size = new System.Drawing.Size(442, 434);
             this.splitContainer3.SplitterDistance = 225;
             this.splitContainer3.TabIndex = 17;
+            // 
+            // propertyGrid1
+            // 
+            this.propertyGrid1.DocCommentHeight = 59;
+            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertyGrid1.LineColor = System.Drawing.SystemColors.ScrollBar;
+            this.propertyGrid1.Location = new System.Drawing.Point(3, 16);
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.Size = new System.Drawing.Size(296, 459);
+            this.propertyGrid1.TabIndex = 18;
+            this.propertyGrid1.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.propertyGrid1_PropertyValueChanged);
+            this.propertyGrid1.SelectedGridItemChanged += new System.Windows.Forms.SelectedGridItemChangedEventHandler(this.propertyGrid1_SelectedGridItemChanged);
             // 
             // PPCLIxPluginControl
             // 
